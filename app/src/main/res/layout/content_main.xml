@@ -9,40 +9,63 @@
     tools:showIn="@layout/activity_main">
 
     <EditText
-        android:id="@+id/originalPrice"
+        android:id="@+id/originalPriceET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:gravity="center"
+        android:hint="Preco Original"
         android:inputType="numberDecimal"
-        android:text="Preco Original"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="45dp" />
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/percentageOff"
+        android:id="@+id/percentageOffET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
         android:gravity="center"
+        android:hint="% OFF"
         android:inputType="number"
-        android:text="% OFF"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="127dp" />
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/originalPriceET" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/calculateBT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="232dp"
         android:text="Calculate"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="369dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentageOffET" />
 
     <TextView
-        android:id="@+id/finalPrice"
+        android:id="@+id/finalPriceTV"
         android:layout_width="wrap_content"
         android:layout_height="16dp"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="246dp" />
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/calculateBT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentageOffET" />
 
 </android.support.constraint.ConstraintLayout>
