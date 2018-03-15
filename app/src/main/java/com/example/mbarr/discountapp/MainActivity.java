@@ -20,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
     private EditText discountPercentageET;
     private TextView finalPriceTV;
 
+    private TextView originalPriceTV;
+    private TextView discountPriceTV;
+
     private double originalPrice = 0.0;
     private double discountPercentage = 0.0;
     private double finalPrice = 0.0;
@@ -34,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
         originalPriceET = findViewById(R.id.originalPriceET);
         discountPercentageET = findViewById(R.id.percentageOffET);
         finalPriceTV = findViewById(R.id.finalPriceTV);
+
+        originalPriceTV = findViewById(R.id.originalPriceTV);
+        discountPriceTV = findViewById(R.id.discountPriceTV);
+
 
         TextWatcher textWatcher = new TextWatcher() {
             @Override
@@ -53,8 +60,11 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 finalPrice = originalPrice * (1 - (discountPercentage / 100.0));
+                double discountPrice = originalPrice * (discountPercentage / 100.0);
 
-                finalPriceTV.setText("Final Price : $ " + String.format("%.2f", finalPrice) + "");
+                finalPriceTV.setText("Final Price : $ " + String.format("%.2f", finalPrice));
+                discountPriceTV.setText("You saved: $ " + String.format("%.2f", discountPrice));
+                originalPriceTV.setText("Original price was: $ " + String.format("%.2f", originalPrice));
             }
 
             @Override
@@ -63,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
+        originalPriceET.addTextChangedListener(textWatcher);
         discountPercentageET.addTextChangedListener(textWatcher);
 
 
