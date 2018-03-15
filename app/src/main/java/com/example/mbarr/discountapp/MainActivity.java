@@ -62,9 +62,9 @@ public class MainActivity extends AppCompatActivity {
                 finalPrice = originalPrice * (1 - (discountPercentage / 100.0));
                 double discountPrice = originalPrice * (discountPercentage / 100.0);
 
-                finalPriceTV.setText("Preço Final : $ " + String.format("%.2f", finalPrice));
-                discountPriceTV.setText("Economizou : $ " + String.format("%.2f", discountPrice));
-                originalPriceTV.setText("Preço Original : $ " + String.format("%.2f", originalPrice));
+                finalPriceTV.setText("Preço Final: $" + String.format("%.2f", finalPrice));
+                originalPriceTV.setText("Preço original era: $" + String.format("%.2f", originalPrice));
+                discountPriceTV.setText("Economizou: $" + String.format("%.2f", discountPrice));
             }
 
             @Override
@@ -75,9 +75,6 @@ public class MainActivity extends AppCompatActivity {
 
         originalPriceET.addTextChangedListener(textWatcher);
         discountPercentageET.addTextChangedListener(textWatcher);
-
-
-
 
     }
 

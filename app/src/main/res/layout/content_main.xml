@@ -44,6 +44,7 @@
 
     <TextView
         android:id="@+id/finalPriceTV"
+        android:textSize="25sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -55,23 +56,22 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/percentageOffET"
-        app:layout_constraintVertical_bias="0.185" />
+        app:layout_constraintVertical_bias="0.108" />
 
     <TextView
         android:id="@+id/originalPriceTV"
         android:layout_width="wrap_content"
-        android:layout_height="15dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="168dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/action_settings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.236"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/finalPriceTV"
-        app:layout_constraintVertical_bias="0.211" />
+        app:layout_constraintVertical_bias="0.303" />
 
     <TextView
         android:id="@+id/discountPriceTV"
@@ -80,13 +80,10 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="matheus"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.78"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/finalPriceTV"
-        app:layout_constraintVertical_bias="0.214" />
+        app:layout_constraintTop_toBottomOf="@+id/originalPriceTV"
+        app:layout_constraintVertical_bias="0.085" />
 
 </android.support.constraint.ConstraintLayout>
